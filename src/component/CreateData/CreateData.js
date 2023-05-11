@@ -54,26 +54,31 @@ const CreateData = () => {
       <hr class="mx-20 text-gray-900 border border-gray-200 " />
 
       <table class="mt-8">
-        <tr>
-          <th class="text-start">
-            <td class="text-gray-500">Name :- </td>
-            <td>
-              {sortedItems.length > 0 && (
+        {sortedItems.length > 0 && (
+          <tr>
+            <th class="text-start">
+              <td class="text-gray-500">Name :- </td>
+              <td>
                 <select
                   id="sortOrder"
                   class="border-none"
                   onChange={(e) => setSortOrder(e.target.value)}
                 >
-                  <option value="ascending" class="text-gray-500">Asc</option>
-                  <option value="descending" class="text-gray-500">Des</option>
+                  <option value="ascending" class="text-gray-500">
+                    Asc
+                  </option>
+                  <option value="descending" class="text-gray-500">
+                    Des
+                  </option>
                 </select>
-              )}
-            </td>
-          </th>
-          <th class="text-start text-gray-500">Organization</th>
-          <th class="text-start text-gray-500">Options</th>
-          <th class="text-start text-gray-500">Actions </th>
-        </tr>
+              </td>
+            </th>
+            <th class="text-start text-gray-500">Organization</th>
+            <th class="text-start text-gray-500">Options</th>
+            <th class="text-start text-gray-500">Actions </th>
+          </tr>
+        )}
+
         {sortedItems.map((create) => {
           return (
             <tr>
@@ -121,7 +126,7 @@ const CreateData = () => {
       </table>
       {sortedItems.length > 0 && (
         <div class="text-center mt-40 content-center fixed">
-          <Pagination count={count} onChange={handleChange}  page={page}/>
+          <Pagination count={count} onChange={handleChange} page={page} />
         </div>
       )}
     </div>

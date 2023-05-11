@@ -33,9 +33,10 @@ const EditData = ({ setEditToggle, editSelected }) => {
           const { values, errors, touched, setValues } = formData;
           return (
             <Form>
-              <p class="text-left text-2xl font-sans font-serif text-gray-500">
+              <p class="text-left text-2xl font-sans font-serif text-gray-500 ">
                 Edit Single Lists !{" "}
               </p>
+              <hr class="border-1 text-black"/>
               <div class="flex justify-center items-center justify-around pt-6 flex-wrap ">
                 <div>
                   <Field

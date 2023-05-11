@@ -5,12 +5,13 @@
 /* *{
    box-sizing: border-box;
 } */
+
 table {
   width: 85%;
-  
 }
 table,
-th ,td {
+th,
+td {
   /* border: 1px solid gray; */
   margin: 10px auto;
 }
